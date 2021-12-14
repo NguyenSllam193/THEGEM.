@@ -1,0 +1,27 @@
+.adblock{
+    background-color: $background-color8;
+    color: $white-color;
+    &__slider{
+        padding: 18rem 7rem;
+        text-align: center;
+        &-logo{
+            font-size: 12rem;
+            color: $yellow-color2;
+        }
+        &-title{
+            padding-top: 8rem;
+            font-size: 5rem;
+            font-weight: 300;
+        }
+        &-desc{
+            padding-top: 8rem;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2;
+            text-align: justify;
+        }
+        &-btn{
+            padding-top: 8rem;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@mixin flexbox($align: flex-start, $justify: flex-start, $wrap: wrap, $dir: row) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
+    flex-direction: $dir;
+}
+
+@mixin size($width, $height:$width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin item($text-align: center, $width, $background-color: none, 
+$box-shadow: none, $transition: padding .25s linear, $border-radius: none) {
+    text-align: $text-align;
+    width: $width;
+    background-color: $background-color;
+    box-shadow: $box-shadow;
+    transition: $transition;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,104 @@
+html{
+    font-size: 62.5%;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    color: $gray-color;
+    font-weight: 400;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 1210px;
+    padding: 0 2rem;
+}
+
+.btn{
+    cursor: pointer;
+    outline: none;
+    font-size: 2rem;
+    text-align: center;
+    color: $white-color;
+    padding: 1.25rem 2.5rem;
+    display: inline-block;
+    border: 0;
+    border-radius: .5rem;
+    background: transparent;
+    transition: color .25s linear, border .25s linear;
+    &--hover{
+        &:hover{
+            color: $primary-color;
+        }
+    }
+    &--border{
+        border: 2px solid currentColor;
+    }
+    &--cycle{
+        border-radius: 50%;
+    }
+    &--rounded{
+        border-radius: 5rem;
+    }
+    &--primary{
+        color: $primary-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color;
+        }
+    }
+    &--gray-blue{
+        background-color: $gray-blue-color;
+        &:hover{
+            background-color: transparent;
+            color: $primary-color !important;
+        }
+    }
+    &--gray{
+        background-color: $button-gray-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color !important;
+        }
+    }
+    &--purple{
+        color: $price-mountains-color;
+        &:hover{
+            background-color: $price-mountains-color;
+            color: $white-color !important;
+        }
+    }
+    &--blight-green{
+        color: $beginner-color;
+        &:hover{
+            background-color: $beginner-color;
+            color: $white-color !important;
+        }
+    }
+    &--dark-gray{
+        background-color: $gray-color;
+        &:hover{
+            background-color: $primary-color;
+            color: $white-color !important;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.footer1{
+    background-color: $background-color9;
+    &__container{
+        padding: 18rem 0;
+    }
+    &__list{
+        @include flexbox(center, space-between);
+    }
+    &__item{
+        width: $four-item;
+    }
+}

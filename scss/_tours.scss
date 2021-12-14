@@ -1,0 +1,107 @@
+.tours{
+    background-color: $background-color4;
+    &__container{
+        padding: 18rem 0;
+    }
+    &__list{
+        @include flexbox(center, space-between);
+    }
+    &__item{
+        @include item(center, $three-item, none, 0 0 2px $gray-color,  padding .25s linear);
+        background-color: $white-color;
+        position: relative;
+        &:hover{
+            box-shadow: 0 0 15px $gray-color;
+            transform: scale(1.1);
+        }
+    }
+    &__price{
+        min-width: 12rem;
+        min-height: 12rem;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        // display: none;
+        h4{
+            padding-top: 30%;
+            font-size: 2.8rem;
+            font-weight: 300;
+        }
+        p{
+            font-size: 1.4rem;
+            padding-top: 1rem;
+        }
+        &-ocean{
+            background-color: $white-color;
+            h4{
+                color: $primary-color;
+            }
+            p{
+                color: $background-color4;
+            }
+        }
+        &-mountains{
+            background-color: $black-color;
+            h4{
+                color: $price-mountains-color;
+            }
+            p{
+                color: $background-color4;
+            }
+        }
+        &-forest{
+            background-color: $white-color;
+            h4{
+                color: $price-forest-color;
+            }
+            p{
+                color: $background-color4;
+            }
+        }
+    }
+    &__name{
+        font-size: 4rem;
+        line-height: 6;
+        color: $white-color;
+        &-ocean{
+            background-color: $primary-color;
+        }
+        &-mountains{
+            background-color: $price-mountains-color;
+        }
+        &-forest{
+            background-color: $price-forest-color;
+        }
+    }
+    &__subtitle{
+        padding: 2rem 0;
+        h4{
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 400;
+            opacity: 0.6;
+        }
+    }
+    &__rights{
+        font-size: 1.4rem;
+        line-height: calc(47/14);
+        p:nth-child(1),
+        p:nth-child(3),
+        p:nth-child(5){
+            background-color: $border-color;
+        }
+
+        p:nth-child(4),
+        p:nth-child(5){
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }
+    &__btn{
+        padding: 3rem 0 5rem 0;
+    }
+}

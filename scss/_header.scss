@@ -1,0 +1,77 @@
+.header{
+    padding-top: 2.5rem;
+    background-color: $background-color1;
+    color: $white-color;
+    // menu
+    &__menu{
+        width: 100%;
+        @include flexbox(center, space-between);
+        &-logo{
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: $white-color;
+        }
+        &-list{
+            @include flexbox(center, space-between);
+        }
+        &-item{
+            margin-left: 2.5rem;
+        }
+        &-link{
+            font-size: 1.6rem;
+            padding: 0.5rem 1rem;
+            color: $white-color;
+            opacity: 0.6;
+            transition: color .25s linear;
+            &--active{
+                opacity: 1;
+                border: 2px solid currentColor;
+            }
+            &:hover{
+                opacity: 1;
+                color: $primary-color;
+            }
+        }
+        &-more{
+            @include flexbox(center, space-between)
+        }
+        // &-icon{
+        //     font-size: 1.6rem;
+        // }
+        &-language{
+            width: 1.8rem;
+        }
+    }
+
+    &__slider{
+        padding: 16rem 7rem;
+        @include flexbox(center, space-between, wrap, column);
+        &-logo{
+            font-size: 12rem;
+            color: $primary-color;
+        }
+        &-title{
+            padding-top: 8rem;
+            font-size: 5rem;
+            font-weight: 300;
+            span{
+                margin-left: 1.2rem;
+                font-weight: 600;
+            }
+        }
+        &-desc{
+            padding-top: 6rem;
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 2;
+            text-align: center;
+        }
+        &-btn{
+            padding-top: 6rem;
+        }
+        &-purchase, &-details{
+            min-width: 18rem;
+            margin: 0 2.5rem;
+        }
+    }
+}

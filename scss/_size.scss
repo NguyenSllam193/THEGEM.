@@ -1,0 +1,101 @@
+.size{
+    padding: 18rem 0;
+    background-color: $background-color3;
+    color: $background-color4;
+    &__list{
+        @include flexbox(center, space-between);
+    }
+    &__item{
+        @include item(center, $four-item, $background-color1);
+        border-top-left-radius: 12.5rem;
+        border-top-right-radius: 12.5rem;
+        padding-top: 4rem;
+        transition: color 0.25s linear;
+        opacity: 0.9;
+        &:hover{
+            background-color: $gray-color;
+            opacity: 1;
+        }
+    }
+    &__item:hover .btn{
+        background-color: $white-color;
+        color: $black-color;
+    }
+    &__price{
+        color: $white-color;
+        margin: auto;
+        width: 70%;
+        border-radius: 50%;
+        padding: 6rem 0;
+        h3{
+            font-size: 4rem;
+            font-weight: 300;
+        }
+        p{
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+        &-tiny{
+            background-color: $tiny-color;
+            box-shadow: 0 0 20px $tiny-color;
+        }
+        &-small{
+            background-color: $small-color;
+            box-shadow: 0 0 20px $small-color;
+        }
+        &-medium{
+            background-color: $medium-color;
+            box-shadow: 0 0 20px $medium-color;
+        }
+        &-large{
+            background-color: $large-color;
+            box-shadow: 0 0 20px $large-color;
+        }
+    }
+    &__subtitle{
+        padding: 4rem 0;
+        background-color: $dark-gray-color;
+        opacity: 0.6;
+        h4{
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding-top: 1rem;
+        }
+    }
+    &__name{
+        margin-top: 4rem;
+        font-size: 2.4rem;
+        line-height: 3;
+        font-weight: 600;
+        background-color: $gray-color;
+        &-tiny{
+            color: $tiny-color;
+        }
+        &-small{
+            color: $small-color;
+        }
+        &-medium{
+            color: $medium-color;
+        }
+        &-large{
+            color: $large-color;
+        }
+    }
+    &__rights{
+        font-size: 1.4rem;
+        line-height: calc(47/14);
+        padding-top: 3rem;
+        p:nth-child(4),
+        p:nth-child(5){
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }
+    &__btn{
+        padding: 3rem 0 5rem 0;
+    }
+}

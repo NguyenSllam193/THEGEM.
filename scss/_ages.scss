@@ -1,0 +1,104 @@
+.ages{
+    background-color: $background-color6;
+    &__container{
+        padding: 18rem 0;
+    }
+    &__list{
+        @include flexbox(center, space-between);
+    }
+    &__item{
+        @include item (center, $four-item, $white-color, 0 0 2px $gray-color, 5rem);
+        &:hover{
+            box-shadow: 0 0 10px $gray-color;
+        }
+    }
+    &__item:hover &__price,
+     &__item:hover &__name{
+        background-color: $white-color;
+    }
+    &__item:hover
+    .btn{
+        background-color: $primary-color;
+    }
+    &__price, &__name{
+        background-color: $gray-color;
+    }
+    &__price{
+        margin: auto;
+        padding: 4.5rem 0 12rem 0;
+        h3{
+            color: $button-gray-color;
+            font-size: 8rem;
+            font-weight: 300;
+        }
+        p{
+            color: $yellow-color1;
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+    &__item:hover &__subtitle, 
+    &__item:hover &__rights, 
+    &__item:hover &__btn{
+        background-color: $border-color;
+    }
+    &__subtitle{
+        padding: 2.5rem 0;
+        position: relative;
+        background-color: $white-color;
+        h4{
+            font-size: 2rem;
+            font-weight: 300;
+            color: $primary-color;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.6;
+        }
+        &::before{
+            content: "";
+            width: 50%;
+            height: 4.5rem;
+            background-color: inherit;
+            position: absolute;
+            left: 0;
+            top: -4.5rem;
+            border-top-right-radius: 50rem;
+        }
+        &::after{
+            content: "";
+            width: 50%;
+            height: 4.5rem;
+            background-color: inherit;
+            position: absolute;
+            right: 0;
+            top: -4.5rem;
+            border-top-left-radius: 50rem;
+        }
+    }
+    &__item:hover &__name{
+        color: $black-color;
+    }
+    &__name{
+        font-size: 3rem;
+        font-weight: 400;
+        padding-top: 6rem;
+        color: $white-color;
+    }
+    &__rights{
+        font-size: 1.4rem;
+        line-height: calc(47/14);
+        p{
+            border-top: 1px solid $border-color;
+        }
+        p:nth-child(4),
+        p:nth-child(5){
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }
+    &__btn{
+        padding: 3rem 0 5rem 0;
+    }
+}

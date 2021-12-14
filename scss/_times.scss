@@ -1,0 +1,75 @@
+.times{
+    background-color: $background-color7;
+    color: $white-color;
+    &__container{
+        padding: 18rem 0;
+    }
+    &__list{
+        @include flexbox(center, space-between);
+    }
+    &__item{
+        @include item (center, $four-item, $gray-blue-color, 0 0 2px $gray-color, none, 2rem);
+        overflow: hidden;
+        &:hover{
+            background-color: $gray-color;
+            box-shadow: 0 0 5px $gray-blue-color;
+        }
+    }
+    &__item:hover
+    .btn{
+        background-color: transparent;
+        color: $primary-color;
+    }
+    &__price{
+        background-color: transparent;
+        margin: auto;
+        width: 75%;
+        border-radius: 50%;
+        border: 3px solid $primary-color ;
+        padding: 5.5rem 0;
+        h3{
+            font-size: 6rem;
+            font-weight: 300;
+        }
+        p{
+            color: $primary-color;
+            font-size: 2rem;
+            padding-top: 1rem;
+        }
+    }
+    &__subtitle{
+        padding: 4rem 0;
+        h4{
+            font-size: 2rem;
+            font-weight: 300;
+        }
+        p{
+            font-size: 1.2rem;
+            font-weight: 400;
+            padding-top: 0.8rem;
+            opacity: 0.6;
+        }
+    }
+    &__name{
+        font-size: 2.4rem;
+        font-weight: 600;
+        padding: 2.5rem;
+    }
+    &__rights, &__btn{
+        background-color: $white-color;
+    }
+    &__rights{
+        color: $gray-color;
+        font-size: 1.4rem;
+        line-height: calc(47/14);
+        padding-top: 3rem;
+        p:nth-child(4),
+        p:nth-child(5){
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+    }
+    &__btn{
+        padding: 3rem 0 5rem 0;
+    }
+}
